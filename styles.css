@@ -1,0 +1,89 @@
+*,
+::before,
+::after {
+box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#basketball {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.field {
+    position: relative;
+    background-image: url(./assets/court.png);
+    background-size: cover;
+    width: 600px;
+    height: 323px;
+    user-select: none;
+  }
+  
+  .ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 1s;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+
+  .basket-zone-left {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 30px;
+      top: 153px;
+  }
+
+  .basket-zone-right {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 30px;
+    top: 153px;
+}
+
+  .scores {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .team-score:first-child {
+    padding-left: 5px;
+  }
+
+  .team-score:last-child {
+    padding-right: 5px;
+  }
+
+  .score-for-team-a {
+    display: none;
+      color: blue;
+      font-weight: 900;
+    text-align: center;
+
+  }
+  
+  .score-for-team-b {
+    display: none;
+    color: red;
+    font-weight: 900;
+    text-align: center;
+
+}
+
+.score-for-team-a.show,
+.score-for-team-b.show {
+    display: block;
+}
+
